@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">TellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="warning">TellevoAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <ion-item>
+    <img src="assets/icon/perfil_usuario.png" width="20%" ng-fallimg> Nombre Usuario
+  </ion-item>
+  <br>
+  <ion-item color="warning">
+    <ion-select label="Seleccione horario retorno" placeholder="Seleccione horario">
+      <ion-select-option value="nes">18:30 hrs</ion-select-option>
+      <ion-select-option value="n64">19:00 hrs</ion-select-option>
+      <ion-select-option value="ps">19:15 hrs</ion-select-option>
+      <ion-select-option value="genesis">19:30 hrs</ion-select-option>
+      <ion-select-option value="saturn">20:00 hrs</ion-select-option>
+      <ion-select-option value="snes">20:15 hrs</ion-select-option>
+      <ion-select-option value="snes">20:30 hrs</ion-select-option>
+      <ion-select-option value="snes">21:00 hrs</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <ion-item color="warning">
+    <ion-select label="Cantidad de personas" placeholder="Seleccione cantidad">
+      <ion-select-option value="nes">1</ion-select-option>
+      <ion-select-option value="n64">2</ion-select-option>
+      <ion-select-option value="ps">3</ion-select-option>
+      <ion-select-option value="genesis">4</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <ion-item color="warning">
+    <ion-select label="Ver vehiculos disponibles" placeholder="Elegir vehiculo">
+      <ion-select-option value="nes">Kia Rio 4C</ion-select-option>
+      <ion-select-option value="n64">Mazda 2 Sedan</ion-select-option>
+      <ion-select-option value="ps">Chevrolet Sail</ion-select-option>
+      <ion-select-option value="genesis">Nissan Versa</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <ion-item color="warning">
+      <ion-input label="Precio viaje (por persona)" placeholder="precio"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button shape="round" size="small" [routerLink]="['/confirmar-viaje']">Programar viaje</ion-button><br> 
+  <ion-button shape="round" size="small" [routerLink]="['/alert']">Volver atras</ion-button><br> 
+</ion-content>

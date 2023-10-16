@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">
+      TellevoAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="warning">TellevoAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <div id="container">
+    <strong>Iniciar Sesion</strong>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">A</a></p>
+
+    <img src="assets/icon/tellevo_inicio.jpg" width="70%" ng-fallimg>
+ 
+  
+    <ion-card-header>
+
+
+      <!--<mat-slide-toggle>Hola</mat-slide-toggle>-->
+      <ion-card-title></ion-card-title>
+      <ion-card-subtitle>Ingresar datos</ion-card-subtitle>
+      <!--<ion-buttons slot="end" id="present-alert">
+        <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>-->
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="user.nombreUsuario" label="Nombre Usuario" labelPlacement="floating" placeholder="Ingrese nombre usuario">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="user.password" label="Password" labelPlacement="floating" placeholder="Ingrese contraseña" type="password">
+        </ion-input>
+      </ion-item><br>
+        <!--<p><a target="_blank" rel="noopener noreferrer" [routerLink]="['/pagina']">¿Olvidaste tu contraseña?</a></p>-->
+     <ion-button shape="round" size="small" [routerLink]="['/alert']">Ingresar</ion-button><br>
+     <br>
+     <ion-button shape="round" size="small" [routerLink]="['/pagina']">¿Olvidaste tu contraseña?</ion-button><br> 
+    </ion-card-content>
+
+    
+  </div>
+</ion-content>
+
+

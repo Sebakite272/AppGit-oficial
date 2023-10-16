@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">TellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="warning">TellevoAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ <ion-menu side="end" menuId="menu">
+   <ion-header>
+     <ion-toolbar color="">
+       <ion-title color="warning">TellevoAPP</ion-title>
+     </ion-toolbar>
+   </ion-header>
+ </ion-menu>
+</ion-content>
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+   <ion-list>
+     <ion-item>Inicio</ion-item>
+     <ion-item>Ver viajes</ion-item>
+     <ion-item [routerLink]="['/vehiculos-prop']">Reservar viaje</ion-item>
+     <ion-item>Configuracion</ion-item>
+     <ion-item [routerLink]="['/cerrar-sesion']">Cerrar sesion</ion-item>
+   </ion-list>
+  </ion-header>
+    <!--<ion-content class="ion-padding">nosotros</ion-content>-->
+ </ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> Bienvenido a <br> TellevoAPP!<br>
+  <ion-label>Usuario:{{user.nombreUsuario}}</ion-label><br><br></ion-content>
+  <ion-content>
+    <img src="assets/icon/perfil_usuario.png" width="25%" ng-fallimg>Ver perfil
+  </ion-content>
+  <ion-content>
+    <img src="assets/icon/taxi_viajes.jpg" width="25%" ng-fallimg> Viajes realizados
+  </ion-content>
+  <ion-content>
+    <img src="assets/icon/notificacion.jpg" width="27%" ng-fallimg> Notificaciones
+  </ion-content>
+  <ion-router-outlet id="menu" main></ion-router-outlet>
+</div>
+
+
+  <!--<ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+    <ion-content class="ion-padding">Opciones</ion-content>
+    <ion-content class="ion-padding">Iniciar sesion</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>TellevoAPP</ion-title>
+        <ion-buttons slot="end">
+          <ion-menu-button >Menu</ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+    <ion-router-outlet id="menu" main></ion-router-outlet>
+  </div>-->
+
+
+
+ 
+  
