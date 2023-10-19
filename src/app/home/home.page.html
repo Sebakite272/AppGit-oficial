@@ -33,15 +33,17 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-input [(ngModel)]="user.nombreUsuario" label="Nombre Usuario" labelPlacement="floating" placeholder="Ingrese nombre usuario">
+        <ion-input [(ngModel)]="user.nombreUsuario" label="nombreUsuario" labelPlacement="floating" placeholder="Ingrese nombre usuario">
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input [(ngModel)]="user.password" label="Password" labelPlacement="floating" placeholder="Ingrese contraseña" type="password">
+        <ion-input [(ngModel)]="user.password" label="password" labelPlacement="floating" placeholder="Ingrese contraseña" type="password">
         </ion-input>
       </ion-item><br>
         <!--<p><a target="_blank" rel="noopener noreferrer" [routerLink]="['/pagina']">¿Olvidaste tu contraseña?</a></p>-->
-     <ion-button shape="round" size="small" [routerLink]="['/alert']">Ingresar</ion-button><br>
+     <ion-button (click)="enviarInformacion()" shape="round" size="small">Ingresar</ion-button><br>
+     <br>
+     <ion-button shape="round" size="small" [routerLink]="['/registro']">Registrarse</ion-button><br>
      <br>
      <ion-button shape="round" size="small" [routerLink]="['/pagina']">¿Olvidaste tu contraseña?</ion-button><br> 
     </ion-card-content>

@@ -17,23 +17,23 @@
   <br>
   <ion-item color="warning">
     <ion-select [(ngModel)]="informacion.hora" label="Seleccione horario retorno" placeholder="Seleccione horario">
-      <ion-select-option value="nes">18:30 hrs</ion-select-option>
-      <ion-select-option value="n64">19:00 hrs</ion-select-option>
-      <ion-select-option value="ps">19:15 hrs</ion-select-option>
-      <ion-select-option value="genesis">19:30 hrs</ion-select-option>
-      <ion-select-option value="saturn">20:00 hrs</ion-select-option>
-      <ion-select-option value="snes">20:15 hrs</ion-select-option>
-      <ion-select-option value="snes">20:30 hrs</ion-select-option>
-      <ion-select-option value="snes">21:00 hrs</ion-select-option>
+      <ion-select-option value="18:30 hrs">18:30 hrs</ion-select-option>
+      <ion-select-option value="19:00 hrs">19:00 hrs</ion-select-option>
+      <ion-select-option value="19:15 hrs">19:15 hrs</ion-select-option>
+      <ion-select-option value="19:30 hrs">19:30 hrs</ion-select-option>
+      <ion-select-option value="20:00 hrs">20:00 hrs</ion-select-option>
+      <ion-select-option value="20:15 hrs">20:15 hrs</ion-select-option>
+      <ion-select-option value="20:30 hrs">20:30 hrs</ion-select-option>
+      <ion-select-option value="21:00 hrs">21:00 hrs</ion-select-option>
     </ion-select>
   </ion-item>
   <br>
   <ion-item color="warning">
     <ion-select [(ngModel)]="informacion.cant_personas" label="Cantidad de personas" placeholder="Seleccione cantidad">
-      <ion-select-option value="nes">1</ion-select-option>
-      <ion-select-option value="n64">2</ion-select-option>
-      <ion-select-option value="ps">3</ion-select-option>
-      <ion-select-option value="genesis">4</ion-select-option>
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
     </ion-select>
   </ion-item>
   <br>
@@ -41,12 +41,17 @@
       <ion-input [(ngModel)]="informacion.precio" label="Precio viaje (por persona)" placeholder="precio" slot="start"></ion-input>
   </ion-item>
   <br>
-  <ion-button shape="round" size="small" [routerLink]="['/confirmar-viaje']">Programar viaje</ion-button><br> 
+  <ion-button shape="round" size="small" (click)="enviarInfoViaje()">Programar viaje</ion-button><br> 
   <!--<ion-alert trigger="present-alert" class="custom-alert" header="¿Desea programar este viaje?" [buttons]="alertButtons"></ion-alert>-->
   <!--<ion-alert trigger="present-alert" header="Usuario"
     subHeader="¿Desea programar este horario?" [buttons]="">
     <ion-select-option value="nes">Si</ion-select-option>
     <ion-select-option value="n64">No</ion-select-option>
   </ion-alert>-->
+  <ion-button id="present-al2">
+    Mostrar
+  </ion-button>
+<ion-alert trigger="present-al2" header="Estimado usuario"
+  subHeader="Su viaje sale a las: {{informacion.hora}}, La cantidad de personas son: {{informacion.cant_personas}}, El precio es: {{informacion.precio}}"></ion-alert>
   <ion-button shape="round" size="small" [routerLink]="['/alert']">Volver atras</ion-button><br> 
 </ion-content>

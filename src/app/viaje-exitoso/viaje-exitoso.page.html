@@ -11,6 +11,11 @@
     </ion-toolbar>
   </ion-header>
   <ion-card-title>Felicidades!, su viaje ha sido programado con exito</ion-card-title>
+  <ion-button id="present-alert">
+    Mostrar viaje
+  </ion-button>
+<ion-alert trigger="present-alert" header="Estimado usuario"
+  subHeader="Su viaje sale a las: {{informacion.hora}}, La cantidad de personas son: {{informacion.cant_personas}}, El precio es: {{informacion.precio}}"></ion-alert>
   <ion-card-subtitle></ion-card-subtitle>
 <ion-card-content>
   <ion-button shape="round" size="small" [routerLink]="['/alert']">Volver</ion-button><br>

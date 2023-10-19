@@ -13,7 +13,7 @@
   <ion-card-title>¿Desea programar este viaje?</ion-card-title>
   <ion-card-subtitle></ion-card-subtitle>
 <ion-card-content>
-  <ion-button shape="round" size="small" [routerLink]="['/viaje-exitoso']">Si</ion-button><br>
+  <ion-button shape="round" size="small" (click)="enviarInfoConfirm()">Si</ion-button><br>
   <ion-button shape="round" size="small" [routerLink]="['/reserva1']">No</ion-button><br>
 </ion-card-content>
 </ion-content>

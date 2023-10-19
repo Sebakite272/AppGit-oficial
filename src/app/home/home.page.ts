@@ -10,29 +10,34 @@ import { AutenticacionService } from '../servicios/autenticacion.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
+  public mensaje = "";
 
   
   constructor(private router: Router, private activatedRouter: ActivatedRoute, private authGuard: AuthGuard, private auth: AutenticacionService) {}
 
   public alertButtons = ['OK'];
-  public user = {
+   user = {
     nombreUsuario: "",
     password: ""
   }
 
-
-
-  ngOnInit() {
-    this.activatedRouter.queryParams.subscribe(() => {
-      let state = this.router.getCurrentNavigation()?.extras.state;
-      if (state) {
-        this.user.nombreUsuario = state['user'].nombreUsuario;
-        this.user.password = state['user'].password;
-        console.log(this.user);
+  enviarInformacion() {
+    this.auth.login(this.user.nombreUsuario, this.user.password).then(() => {
+      if (this.auth.autenticado) {
+        let navigationExtras: NavigationExtras = {
+          state: { user: this.user }
+        }
+        this.router.navigate(['/alert'], navigationExtras);
+      } else {
+        this.mensaje = "Debe ingresar sus credenciales";
       }
-    })
+    });
   }
+
+
+
+ 
 
 
 }
