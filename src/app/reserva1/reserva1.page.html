@@ -15,18 +15,8 @@
     <img src="assets/icon/perfil_usuario.png" width="20%" ng-fallimg> Nombre Usuario
   </ion-item>
   <br>
-  <!--<ion-item>
-    <ion-input label="Seleccione horario de retorno" labelPlacement="floating" placeholder="Ingrese horario retorno">
-    </ion-input>
-  </ion-item>
-  <ion-datetime-button datetime="datetime"></ion-datetime-button>
-  <ion-modal [keepContentsMounted]="true">
-    <ng-template>
-       <ion-datetime id="datetime"></ion-datetime>
-     </ng-template>
-  </ion-modal>-->
   <ion-item color="warning">
-    <ion-select label="Seleccione horario retorno" placeholder="Seleccione horario">
+    <ion-select [(ngModel)]="informacion.hora" label="Seleccione horario retorno" placeholder="Seleccione horario">
       <ion-select-option value="nes">18:30 hrs</ion-select-option>
       <ion-select-option value="n64">19:00 hrs</ion-select-option>
       <ion-select-option value="ps">19:15 hrs</ion-select-option>
@@ -39,7 +29,7 @@
   </ion-item>
   <br>
   <ion-item color="warning">
-    <ion-select label="Cantidad de personas" placeholder="Seleccione cantidad">
+    <ion-select [(ngModel)]="informacion.cant_personas" label="Cantidad de personas" placeholder="Seleccione cantidad">
       <ion-select-option value="nes">1</ion-select-option>
       <ion-select-option value="n64">2</ion-select-option>
       <ion-select-option value="ps">3</ion-select-option>
@@ -48,7 +38,7 @@
   </ion-item>
   <br>
   <ion-item color="warning">
-      <ion-input label="Precio viaje (por persona)" placeholder="precio"></ion-input>
+      <ion-input [(ngModel)]="informacion.precio" label="Precio viaje (por persona)" placeholder="precio" slot="start"></ion-input>
   </ion-item>
   <br>
   <ion-button shape="round" size="small" [routerLink]="['/confirmar-viaje']">Programar viaje</ion-button><br> 
