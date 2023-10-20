@@ -7,11 +7,11 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Registro</ion-title>
+      <ion-title size="large" color="warning">Registro</ion-title>
     </ion-toolbar>
   </ion-header>
   <div id="container">
-    <strong>Registrarse</strong>
+    <strong></strong>
     <p><a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"></a></p>
 
     <img src="assets/icon/tellevo_inicio.jpg" width="70%" ng-fallimg>
@@ -25,7 +25,7 @@
       <!--<ion-buttons slot="end" id="present-alert">
         <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>-->
         <ion-card-content>
-          <ion-card-subtitle>Ingresar Datos</ion-card-subtitle>
+          <ion-card-subtitle>Ingrese datos para Registrarse</ion-card-subtitle>
           <ion-item>
             <ion-input [(ngModel)]="user.nombreUsuario" label="Nombre Usuario" labelPlacement="floating" placeholder="Ingrese nombre usuario">
             </ion-input>
@@ -41,6 +41,7 @@
             <!--<p><a target="_blank" rel="noopener noreferrer" [routerLink]="['/pagina']">¿Olvidaste tu contraseña?</a></p>-->
          <ion-button (click)="confirm()" shape="round" size="small">Registrarse</ion-button><br>
          <br>
+         <ion-button shape="round" size="small" [routerLink]="['/home']">Volver</ion-button><br>
         </ion-card-content>  
   </ion-card-header>
     
