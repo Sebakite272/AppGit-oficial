@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="warning">TellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="warning">TellevoAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card-title>Felicidades!, su viaje ha sido programado con exito</ion-card-title>
+  <ion-button id="present-alert">
+    Mostrar viaje
+  </ion-button>
+<ion-alert trigger="present-alert" header="DATOS DEL VIAJE"
+  subHeader="Su viaje sale a las: {{info.hora}}, La cantidad de personas son: {{info.cant_personas}}, el vehiculo es un: {{info.vehiculo}}  El costo del viaje es: {{info.precio}}"></ion-alert>
+  <ion-card-subtitle></ion-card-subtitle>
+<ion-card-content>
+  <ion-button shape="round" size="small" [routerLink]="['/alert']">Volver</ion-button><br>
+</ion-card-content>
+</ion-content>

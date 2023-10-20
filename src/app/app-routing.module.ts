@@ -42,6 +42,7 @@ const routes: Routes = [
   },
   {
     path: 'disponible',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./disponible/disponible.module').then( m => m.DisponiblePageModule)
   },
   {
@@ -88,6 +89,18 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./error-pagina/error-pagina.module').then( m => m.ErrorPaginaPageModule)
+  },
+  {
+    path: 'confirm-viaje2',
+    loadChildren: () => import('./confirm-viaje2/confirm-viaje2.module').then( m => m.ConfirmViaje2PageModule)
+  },
+  {
+    path: 'viaje-exitoso22',
+    loadChildren: () => import('./viaje-exitoso22/viaje-exitoso22.module').then( m => m.ViajeExitoso22PageModule)
   },
 ];
 
