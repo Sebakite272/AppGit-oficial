@@ -91,16 +91,18 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: '**',
-    loadChildren: () => import('./error-pagina/error-pagina.module').then( m => m.ErrorPaginaPageModule)
-  },
-  {
     path: 'confirm-viaje2',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./confirm-viaje2/confirm-viaje2.module').then( m => m.ConfirmViaje2PageModule)
   },
   {
     path: 'viaje-exitoso22',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./viaje-exitoso22/viaje-exitoso22.module').then( m => m.ViajeExitoso22PageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./error-pagina/error-pagina.module').then( m => m.ErrorPaginaPageModule)
   },
 ];
 

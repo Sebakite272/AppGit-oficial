@@ -50,6 +50,11 @@
       <ion-input [(ngModel)]="info.precio" label="Precio viaje (por persona)" placeholder="precio"></ion-input>
   </ion-item>
   <br>
-  <ion-button shape="round" size="small" (click)="enviarViaje()">Programar viaje</ion-button><br> 
+  <ion-button shape="round" size="small" (click)="enviarViaje()">Programar viaje</ion-button><br>
+  <ion-button id="present-al3">
+    Mostrar
+  </ion-button>
+<ion-alert trigger="present-al3" header="Estimado usuario"
+  subHeader="Su viaje sale a las: {{info.hora}}, La cantidad de personas son: {{info.cant_personas}}, El vehiculo es un: {{info.vehiculo}}, El precio es: {{info.precio}}"></ion-alert>
   <ion-button shape="round" size="small" [routerLink]="['/alert']">Volver atras</ion-button><br>
 </ion-content>
