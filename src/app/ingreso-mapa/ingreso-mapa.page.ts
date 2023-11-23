@@ -24,7 +24,7 @@ export class IngresoMapaPage {
     if(Title == "") {
       const alert = await this.alertController.create({
         header: 'Alerta',
-        message: "Ingrese los parametros para continuar",
+        message: "Ingrese los parametros correctos para continuar",
         buttons: ['OK']
       });
         await alert.present();
