@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Ubicacion</ion-card-title>
+        <ion-card-subtitle>Establece tu ubicacion</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Titulo</ion-label>
+            <ion-input  [(ngModel)] ="title" type="text"></ion-input>
+          </ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Latitud</ion-label>
+                  <ion-input [(ngModel)]="lat" type="number"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Longitud</ion-label>
+                    <ion-input [(ngModel)]="lng" type="number"></ion-input>
+                  </ion-item>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <div class="ion-padding">
+          <ion-button expand="block" (click)="sendMarker(title, lat, lng)">Buscar</ion-button>
+          <!--<ion-button expand="block" (click)="sendMarker(title.value as string, lat.value as number, lng.value as number)">Buscar</ion-button>-->
+        </div>
+        <ion-item [routerLink]="['/alert']">Volver </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

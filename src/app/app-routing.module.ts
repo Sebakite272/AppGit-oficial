@@ -101,6 +101,16 @@ const routes: Routes = [
     loadChildren: () => import('./viaje-exitoso22/viaje-exitoso22.module').then( m => m.ViajeExitoso22PageModule)
   },
   {
+    path: 'mapa',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'ingreso-mapa',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./ingreso-mapa/ingreso-mapa.module').then( m => m.IngresoMapaPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./error-pagina/error-pagina.module').then( m => m.ErrorPaginaPageModule)
   },
