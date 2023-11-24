@@ -17,15 +17,15 @@ export class MapaPage implements OnInit {
 
   map = null;
 
-  marker: Marker = {position:{lat:0,lng:0}, title:""};
+  //marker: Marker = {position:{lat:0,lng:0}, title:""};//
   
-  //marker: Marker = {
-    //position: {
-     // lat: 18.48291933354735,
-      //lng: -69.91223183166025,
-    //},
-    //title: "Sambil"
-  //};
+  marker: Marker = {
+    position: {
+     lat: 18.48291933354735,
+      lng: -69.91223183166025,
+    },
+    title: "Sambil"
+  };
 
   coordInfo: CoordInfo = {country: "", city: ""};
 
@@ -77,7 +77,6 @@ export class MapaPage implements OnInit {
     
   
   
-
 
   addInfoToMarker(marker: Marker, mapMarker: any) {
     this.mapController.getHttpData(marker).subscribe((coordData: any) => {
