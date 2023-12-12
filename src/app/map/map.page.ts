@@ -6,14 +6,12 @@ import { MapControllerService } from '../services/map-controller.service';
 
 declare var google:any;
 
-
-
 @Component({
-  selector: 'app-mapa',
-  templateUrl: 'mapa.page.html',
-  styleUrls: ['mapa.page.scss'],
+  selector: 'app-map',
+  templateUrl: './map.page.html',
+  styleUrls: ['./map.page.scss'],
 })
-export class MapaPage implements OnInit {
+export class MapPage implements OnInit {
 
   map = null;
 
@@ -31,7 +29,6 @@ export class MapaPage implements OnInit {
 
   coordInfo: CoordInfo = {country: "", city: ""};
 
-
   constructor(private mapController: MapControllerService) { }
 
   ngOnInit() {
@@ -42,7 +39,7 @@ export class MapaPage implements OnInit {
 
   loadMap() {
     // create a new map by passing HTMLElement
-    const mapEle: HTMLElement | null = document.getElementById('mapa');
+    const mapEle: HTMLElement | null = document.getElementById('map');
     // create LatLng object
     if (mapEle) {
       const myLatLng = {
@@ -57,10 +54,10 @@ export class MapaPage implements OnInit {
       google.maps.event.addListenerOnce(this.map, 'idle', () => {
         this.addMarker(this.marker);
         //this.renderMarkers();
-        mapEle.classList.add('show-mapa');
+        mapEle.classList.add('show-map');
       });
         } else {
-          console.error('Element with ID "mapa" not found');
+          console.error('Element with ID "map" not found');
         }
   
   }
@@ -106,14 +103,7 @@ export class MapaPage implements OnInit {
       });
 
     });
+   }
   }
-
-  
-
-  }
-
-  
-
-
 
 

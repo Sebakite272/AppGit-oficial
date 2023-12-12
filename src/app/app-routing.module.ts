@@ -111,9 +111,15 @@ const routes: Routes = [
     loadChildren: () => import('./ingreso-mapa/ingreso-mapa.module').then( m => m.IngresoMapaPageModule)
   },
   {
+    path: 'map',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./error-pagina/error-pagina.module').then( m => m.ErrorPaginaPageModule)
   },
+ 
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Marker } from '../models/marker.model';
 import { HttpClient } from '@angular/common/http';
 
-const apiKey = "ghTLo47bIQi-POLPs-YUKo--qkK3B4F-SeunVt5BsYY";
+const apiKey = "AIzaSyCJ4gtv3V9TOoqlK47QjKXzjmfCiVLKqjY";
 
 
 @Injectable({
